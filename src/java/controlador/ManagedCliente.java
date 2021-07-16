@@ -2,6 +2,7 @@
 package controlador;
 
 import EBJ.ClienteFacadeLocal;
+import java.util.Iterator;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -18,6 +19,7 @@ public class ManagedCliente {
     @EJB
     private ClienteFacadeLocal clienteFacade;
     private List<Cliente> listaCliente;
+    private List<Cliente> usu;
     private Cliente cli;
     private Distrito dis;
 
@@ -28,6 +30,14 @@ public class ManagedCliente {
 
     public void setListaCliente(List<Cliente> listaCliente) {
         this.listaCliente = listaCliente;
+    }
+    
+    public List<Cliente> getUsu() {
+        return usu;
+    }
+
+    public void setUsu(List<Cliente> usu) {
+        this.usu = usu;
     }
 
     public Cliente getCli() {
@@ -69,6 +79,22 @@ public class ManagedCliente {
     public void modificar(){
         this.cli.setIdDistritocli(dis);
         this.clienteFacade.edit(cli);
+    }
+
+    public String validarCliente(){
+        String irPagina = null;
+        usu = clienteFacade.iniciarSesion(cli);
+        if(!usu.isEmpty()){
+            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("cleinte", cli);
+            irPagina = "SaludoC";
+            Iterator i = usu.iterator();
+            while(i.hasNext()){
+                cli = (Cliente)i.next();
+            }
+        }else{
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL,"UsuarioInvalido","Aviso"));
+        }
+        return irPagina;
     }
     
     
