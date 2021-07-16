@@ -7,6 +7,9 @@ package EBJ;
 
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import modelo.Cliente;
+import modelo.Trabajador;
 
 /**
  *
@@ -61,4 +64,21 @@ public abstract class AbstractFacade<T> {
         return ((Long) q.getSingleResult()).intValue();
     }
     
+    public List<Cliente> iniciarSesion(Cliente cli){
+        String sql = "Select u from Cliente u where u.correocli = ?1 and u.contrasenacli = ?2";        Query query = getEntityManager().createQuery(sql);
+        Query query1 = getEntityManager().createQuery(sql);
+        query1.setParameter(1, cli.getCorreocli());
+        query1.setParameter(2, cli.getContrasenacli());
+        return query1.getResultList();
+        
+    }
+    
+    public List<Trabajador> iniciarSesionT(Trabajador t){
+        String sql = "Select t from Trabajador t where t.correotra = ?1 and t.contrasenatra = ?2";
+        Query query = getEntityManager().createQuery(sql);
+        query.setParameter(1, t.getCorreotra());
+        query.setParameter(2, t.getContrasenatra());
+        return query.getResultList();
+        
+    }
 }

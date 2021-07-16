@@ -31,26 +31,5 @@ public class TrabajadorFacade extends AbstractFacade<Trabajador> implements Trab
         super(Trabajador.class);
     }
     
-    @Override
-    public Trabajador iniciarS(Trabajador traba){
-        Trabajador trabajador = null;
-        try {
-            String sql = "FROM Trabajador t WHERE t.correotra =?1 and t.contrasenatra = ?2";
-            Query query = em.createQuery(sql);
-            query.setParameter(1, traba.getCorreotra());
-            query.setParameter(2, traba.getContrasenatra());
-            
-            List<Trabajador>lista = query.getResultList();
-            if(!lista.isEmpty()){
-                trabajador = lista.get(0);
-            }
-        } catch (Exception e) {
-            throw e;
-        }
-        
-        
-        
-        return trabajador;
-    }
-    
+
 }

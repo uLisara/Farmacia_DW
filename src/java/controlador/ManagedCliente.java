@@ -71,19 +71,5 @@ public class ManagedCliente {
         this.clienteFacade.edit(cli);
     }
     
-    public String iniciar(){
-        Cliente c;
-        String redireccion = null;
-        try {
-            c = clienteFacade.iniciar(cli);
-            if(c!=null){
-                redireccion = "index";
-            }else{
-                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL, "AVISO", "DATOS INCORRECTOS"));
-            }
-        } catch (Exception e) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL, "AVISO", "ERROR!"));
-        }
-        return redireccion;
-    }
+    
 }

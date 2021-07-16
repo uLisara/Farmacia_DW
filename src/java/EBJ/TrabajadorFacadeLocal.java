@@ -30,5 +30,5 @@ public interface TrabajadorFacadeLocal {
 
     int count();
     
-    Trabajador iniciarS(Trabajador t);
+    List<Trabajador> iniciarSesionT(Trabajador t);
 }

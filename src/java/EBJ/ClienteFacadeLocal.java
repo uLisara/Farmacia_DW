@@ -30,5 +30,5 @@ public interface ClienteFacadeLocal {
 
     int count();
     
-    Cliente iniciar(Cliente c);
+    List<Cliente> iniciarSesion(Cliente cli);
 }

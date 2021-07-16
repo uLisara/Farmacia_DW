@@ -69,20 +69,5 @@ public class ManagedTrabajador {
         this.traba.setIdTipotrabajador(tipoTra);
         this.trabFacade.edit(traba);
     }
-    public String iniciarS(){
-        Trabajador t;
-        String redireccion =null;
-        try {
-            t=trabFacade.iniciarS(traba);
-            if(t!=null){
-                redireccion = "index";
-            }else{
-                FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL,"AVISO","DATOS INCORRECTOS"));
-            }
-        } catch (Exception e) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL,"AVISO","error!"));
-        }
-        
-        return redireccion;
-    }
+    
 }

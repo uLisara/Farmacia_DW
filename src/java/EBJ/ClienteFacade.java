@@ -31,23 +31,5 @@ public class ClienteFacade extends AbstractFacade<Cliente> implements ClienteFac
         super(Cliente.class);
     }
     
-    @Override
-    public Cliente iniciar(Cliente cli){
-       Cliente cliente = null;
-        try {
-            String sql = "FROM Cliente c WHERE c.correocli =?1 and c.contrasenacli = ?2";
-            Query query = em.createQuery(sql);
-            query.setParameter(1, cli.getCorreocli());
-            query.setParameter(2, cli.getContrasenacli());
-            
-            List<Cliente>lista = query.getResultList();
-            if(!lista.isEmpty()){
-                cliente = lista.get(0);
-            }
-        } catch (Exception e) {
-            throw e;
-        }
-       
-       return cliente;
-    }
+    
 }
