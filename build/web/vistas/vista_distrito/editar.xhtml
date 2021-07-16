@@ -10,17 +10,17 @@
         <ui:include src="../../template/admin.xhtml"></ui:include>
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedDistrito.distri.idDistrito}"></h:outputText>
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedDistrito.distri.nomDis}"></h:inputText>
-                <h:outputLabel value="Costo Envio"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.costoEnvio']}"></h:outputLabel>
                 <h:inputText value="#{managedDistrito.distri.costoenvio}"></h:inputText>
-                <h:commandButton value="Actualizar" actionListener="#{managedDistrito.modificar()}" action="listar"></h:commandButton>
+                <h:commandButton value="#{msj['editar.actualizar']}" actionListener="#{managedDistrito.modificar()}" action="listar"></h:commandButton>
             </h:panelGrid>
         </h:form>
-        <h:link outcome="" value="Regresar"></h:link><br></br>
-        <h:link outcome="listar" value="Listar Distrito"></h:link><br></br>
+        <h:link outcome="" value="#{msj['editar.regresar']}"></h:link><br></br>
+        <h:link outcome="listar" value="#{msj['editar.ListarDistrito']}"></h:link><br></br>
     </h:body>
 </html>
 

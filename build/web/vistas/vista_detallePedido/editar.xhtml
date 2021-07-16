@@ -9,25 +9,25 @@
     <h:body>
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedDetallePedido.detalle.iddetallepe}"></h:outputText>
                 
-                <h:outputLabel value="Producto"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.producto']}"></h:outputLabel>
                 <h:selectOneMenu value="#{managedDetallePedido.prod.idpro}">
                     <f:selectItems value="#{managedProducto.listaPro}" var="a"
                                    itemLabel="#{a.nombrepro}" itemValue="#{a.idpro}" ></f:selectItems>
                 </h:selectOneMenu>
                 
-                <h:outputLabel value="Cantidad"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.cantidad']}"></h:outputLabel>
                 <h:inputText value="#{managedDetallePedido.detalle.cantidaddetellepe}"></h:inputText>
                 
-                <h:outputLabel value="Total"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.Total']}"></h:outputLabel>
                 <h:inputText value="#{managedDetallePedido.detalle.totaldetallepe}"></h:inputText>
                 
-                <h:commandButton value="Actualizar" action="listar" actionListener="#{managedDetallePedido.modificar()}"></h:commandButton>
+                <h:commandButton value="#{msj['editar.actualizar']}" action="listar" actionListener="#{managedDetallePedido.modificar()}"></h:commandButton>
             </h:panelGrid>
-            <h:link outcome="/index" value="Regresar a principal"></h:link><br></br>
-            <h:link outcome="listar" value="Listar Pedidos"></h:link><br></br>
+            <h:link outcome="/index" value="#{msj['editar.regresar']}"></h:link><br></br>
+            <h:link outcome="listar" value="#{msj['editar.ListarPedidos']}"></h:link><br></br>
         </h:form>
     </h:body>
 </html>

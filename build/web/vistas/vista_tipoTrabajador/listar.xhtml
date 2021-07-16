@@ -17,27 +17,27 @@
             <b:dataTable value="#{managedTipotrabajador.lisTipo}" var="lis">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="ID"></h:outputText>
+                        <h:outputText value="#{msj['listar.ID']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idtipotra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Nombre"></h:outputText>
+                        <h:outputText value="#{msj['listar.Nombre']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.nomtipotra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Eliminar"></h:outputText>
+                        <h:outputText value="#{msj['listar.eliminar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #ff0000 " class="btn btn-warning" value="Eliminar" actionListener="#{managedTipotrabajador.eliminar(lis)}"></h:commandButton>
+                    <h:commandButton style="background-color: #ff0000 " class="btn btn-warning" value="#{msj['listar.eliminar']}" actionListener="#{managedTipotrabajador.eliminar(lis)}"></h:commandButton>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Modificar"></h:outputText>
+                        <h:outputText value="#{msj['listar.modificar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Modificar" actionListener="#{managedTipotrabajador.cargarDatos(lis)}" action="editar"></h:commandButton>
+                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['listar.modificar']}" actionListener="#{managedTipotrabajador.cargarDatos(lis)}" action="editar"></h:commandButton>
                 </h:column>
             </b:dataTable>
         </h:form>

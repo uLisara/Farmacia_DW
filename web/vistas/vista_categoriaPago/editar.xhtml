@@ -8,15 +8,15 @@
     <h:body>
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedCategoriaPago.catPago.idcatpago}"></h:outputText>
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedCategoriaPago.catPago.nomcatpago}"></h:inputText>
-                <h:commandButton value="Actualizar" actionListener="#{managedCategoriaPago.modificar()}" action="lista"></h:commandButton>
+                <h:commandButton value="#{msj['editar.actualizar']}" actionListener="#{managedCategoriaPago.modificar()}" action="lista"></h:commandButton>
             </h:panelGrid>
         </h:form>
-        <h:link outcome="" value="Regresar"></h:link><br></br>
-        <h:link outcome="lista" value="Listar Categoria Pago"></h:link><br></br>
+        <h:link outcome="" value="#{msj['editar.regresar']}"></h:link><br></br>
+        <h:link outcome="lista" value="#{msj['editar.ListarCategoriaPago']}"></h:link><br></br>
     </h:body>
 </html>
 

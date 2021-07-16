@@ -20,33 +20,33 @@ and open the template in the editor.
             <b:dataTable value="#{managedDistrito.listarDistrito}" widgetVar="" var="dis">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="ID"></h:outputText>
+                        <h:outputText value="#{msj['listar.ID']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{dis.idDistrito}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Nombre"></h:outputText>
+                        <h:outputText value="#{msj['listar.Nombre']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{dis.nomDis}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Costo Envio"></h:outputText>
+                        <h:outputText value="#{msj['listar.costoEnvio']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{dis.costoenvio}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Eliminar"></h:outputText>
+                        <h:outputText value="#{msj['listar.eliminar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #ff0000 " class="btn btn-warning" value="Eliminar" actionListener="#{managedDistrito.eliminar(dis)}"></h:commandButton>
+                    <h:commandButton style="background-color: #ff0000 " class="btn btn-warning" value="#{msj['listar.eliminar']}" actionListener="#{managedDistrito.eliminar(dis)}"></h:commandButton>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Modificar"></h:outputText>
+                        <h:outputText value="#{msj['listar.modificar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Modificar" action="editar" actionListener="#{managedDistrito.cargarDatos(dis)}"></h:commandButton>
+                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['listar.modificar']}" action="editar" actionListener="#{managedDistrito.cargarDatos(dis)}"></h:commandButton>
                 </h:column>
             </b:dataTable>
         </h:form>

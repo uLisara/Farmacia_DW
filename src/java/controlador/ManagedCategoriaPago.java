@@ -3,10 +3,14 @@ package controlador;
 
 import EBJ.CategoriapagoFacadeLocal;
 import java.util.List;
+import java.util.Locale;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.component.UIViewRoot;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ValueChangeEvent;
 import modelo.Categoriapago;
 
 @ManagedBean
@@ -53,5 +57,11 @@ public class ManagedCategoriaPago {
     
     public void modificar(){
         this.catPagoFacade.edit(catPago);
+    }
+    
+    public void cambiarIdioma(ValueChangeEvent e){
+        FacesContext fc = FacesContext.getCurrentInstance();
+        UIViewRoot uiv = fc.getViewRoot();
+        uiv.setLocale(new Locale(e.getNewValue().toString()));
     }
 }

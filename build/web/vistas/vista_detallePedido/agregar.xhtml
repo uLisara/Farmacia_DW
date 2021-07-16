@@ -9,22 +9,22 @@
     <h:body>
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedDetallePedido.detalle.iddetallepe}"></h:outputText>
                 
-                <h:outputLabel value="Producto"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.producto']}"></h:outputLabel>
                 <h:selectOneMenu value="#{managedDetallePedido.prod.idpro}">
                     <f:selectItems value="#{managedProducto.listaPro}" var="a"
                                    itemLabel="#{a.nombrepro}" itemValue="#{a.idpro}" ></f:selectItems>
                 </h:selectOneMenu>
                 
-                <h:outputLabel value="Cantidad"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.cantidad']}"></h:outputLabel>
                 <h:inputText value="#{managedDetallePedido.detalle.cantidaddetellepe}"></h:inputText>
                 
-                <h:outputLabel value="Total"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.total']}"></h:outputLabel>
                 <h:inputText value="#{managedDetallePedido.detalle.totaldetallepe}"></h:inputText>
                 
-                <h:commandButton value="Agregar" action="listar" actionListener="#{managedDetallePedido.guardar()}"></h:commandButton>
+                <h:commandButton value="#{msj['agregar.agregar']}" action="listar" actionListener="#{managedDetallePedido.guardar()}"></h:commandButton>
             </h:panelGrid>
         </h:form>
     </h:body>

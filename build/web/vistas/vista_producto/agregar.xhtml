@@ -17,22 +17,22 @@
         <h:form enctype="multipart/form-data" style="border:5px solid #E1E1E1; border-radius: 10px; height: 280px;
                 margin: 0 auto; width: 30%; padding-bottom: 20px; padding-left: 1px; padding-top: 20px; text-align: center">
             <b:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedProducto.pro.idpro}"></h:outputText>
                 
-                <h:outputLabel value="Categoria"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.categoria']}"></h:outputLabel>
                 <h:selectOneMenu value="#{managedProducto.sub.idSub}">
                     <f:selectItems value="#{managedSubCatPro.listaSubCatPro}" var="a"
                                    itemLabel="#{a.nombreSub}" itemValue="#{a.idSub}"></f:selectItems>
                 </h:selectOneMenu>
                 
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.Nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedProducto.pro.nombrepro}"></h:inputText>
                 
-                <h:outputLabel value="Precio"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.precio']}"></h:outputLabel>
                 <h:inputText value="#{managedProducto.pro.preciopro}"></h:inputText>
                 
-                <h:outputLabel value="Stock"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.stock']}"></h:outputLabel>
                 <h:inputText value="#{managedProducto.pro.stockpro}"></h:inputText>
             </b:panelGrid>
             <p:fileUpload mode="advanced"
@@ -40,7 +40,7 @@
                           auto="true"
                           allowTypes="/(\.|\/)(gif|jpg|jpeg|png|GIF|JPG|JPEJ|PNG)$/"></p:fileUpload>
                 
-            <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Agregar" action="listar" actionListener="#{managedProducto.guardar()}" ></h:commandButton>
+            <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['agregar.guardar']}" action="listar" actionListener="#{managedProducto.guardar()}" ></h:commandButton>
             
         </h:form>
     </h:body>

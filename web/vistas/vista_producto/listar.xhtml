@@ -22,57 +22,57 @@ and open the template in the editor.
             <b:dataTable value="#{managedProducto.listaPro}" widgetVar="" var="lis">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="ID"></h:outputText>
+                        <h:outputText value="#{msj['listar.ID']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idpro}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Categoria"></h:outputText>
+                        <h:outputText value="#{msj['listar.categoria']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idSubcategoria.idCategoria.nombreCat}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="SubCategoria"></h:outputText>
+                        <h:outputText value="#{msj['listar.subcategoria']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idSubcategoria.nombreSub}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Nombre"></h:outputText>
+                        <h:outputText value="#{msj['listar.Nombre']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.nombrepro}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Precio"></h:outputText>
+                        <h:outputText value="#{msj['listar.precio']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.preciopro}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Stock Actual"></h:outputText>
+                        <h:outputText value="#{msj['listar.precio']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.stockpro}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="imagen"></h:outputText>
+                        <h:outputText value="#{msj['listar.imagen']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.imagen}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Eliminar"></h:outputText>
+                        <h:outputText value="#{msj['listar.eliminar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #ff0000 " class="btn btn-warning" value="Eliminar" actionListener="#{managedProducto.eliminar(lis)}"></h:commandButton>
+                    <h:commandButton style="background-color: #ff0000 " class="btn btn-warning" value="#{msj['listar.eliminar']}" actionListener="#{managedProducto.eliminar(lis)}"></h:commandButton>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Modificar"></h:outputText>
+                        <h:outputText value="#{msj['listar.modificar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Modificar" action="editar" actionListener="#{managedProducto.cargarDatos(lis)}"></h:commandButton>
+                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['listar.modificar']}" action="editar" actionListener="#{managedProducto.cargarDatos(lis)}"></h:commandButton>
                 </h:column>
             </b:dataTable>
         </h:form>

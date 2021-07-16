@@ -14,37 +14,37 @@
             <b:dataTable value="#{managedPedido.listaPedido}" widgetVar=""  var="lis">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Nro"></h:outputText>
+                        <h:outputText value="#{msj['listar.ID']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idpedido}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Categoria Pago"></h:outputText>
+                        <h:outputText value="#{msj['listar.categoriaPago']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idCatpagopedi.nomcatpago}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Cliente"></h:outputText>
+                        <h:outputText value="#{msj['listar.cliente']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idClientepedi.nombrecli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Detalle"></h:outputText>
+                        <h:outputText value="#{msj['listar.detalle']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idDetallespedi.iddetallepe}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Estado Pedido"></h:outputText>
+                        <h:outputText value="#{msj['listar.estadoPedido']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idEstadopedi.nomestadope}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Tipo Pago"></h:outputText>
+                        <h:outputText value="#{msj['listar.tipoPago']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idTipopagopedi.nombrepg}"></h:outputText>
                 </h:column>
@@ -52,9 +52,9 @@
                 
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Modificar"></h:outputText>
+                        <h:outputText value="#{msj['listar.modificar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Modificar" action="editar" actionListener="#{managedPedido.cargarDatos(lis)}"></h:commandButton>
+                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['listar.modificar']}" action="editar" actionListener="#{managedPedido.cargarDatos(lis)}"></h:commandButton>
                 </h:column>
             </b:dataTable>
         </h:form>

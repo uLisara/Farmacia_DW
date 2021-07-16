@@ -21,75 +21,81 @@
             <b:dataTable value="#{managedCliente.listaCliente}" widgetVar="" var="lis" >
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="DNI"></h:outputText>
+                        <h:outputText value="#{msj['listar.dni']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.dnicli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Nombre"></h:outputText>
+                        <h:outputText value="#{msj['listar.Nombre']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.nombrecli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="A. Paterno"></h:outputText>
+                        <h:outputText value="#{msj['listar.apellidoPaterno']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.apePaternocli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="A. Materno"></h:outputText>
+                        <h:outputText value="#{msj['listar.apellidoMaterno']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.apeMaternocli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Genero"></h:outputText>
+                        <h:outputText value="#{msj['listar.genero']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.sexocli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Telefono"></h:outputText>
+                        <h:outputText value="#{msj['listar.telefono']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.telefonocli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Correo"></h:outputText>
+                        <h:outputText value="#{msj['listar.correo']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.correocli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Contraseña"></h:outputText>
+                        <h:outputText value="#{msj['listar.contraseña']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.contrasenacli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Distrito"></h:outputText>
+                        <h:outputText value="#{msj['listar.distrito']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idDistritocli.nomDis}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Referencia"></h:outputText>
+                        <h:outputText value="#{msj['listar.direccion']}"></h:outputText>
+                    </f:facet>
+                    <h:outputText value="#{lis.direccioncli}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="#{msj['listar.referencia']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.referenciacli}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Eliminar"></h:outputText>
+                        <h:outputText value="#{msj['listar.eliminar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #ff0000 " class="btn btn-warning" value="Eliminar" actionListener="#{managedCliente.eliminar(lis)}"></h:commandButton>
+                    <h:commandButton style="background-color: #ff0000 " class="btn btn-warning" value="#{msj['listar.eliminar']}" actionListener="#{managedCliente.eliminar(lis)}"></h:commandButton>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Modificar"></h:outputText>
+                        <h:outputText value="#{msj['listar.modificar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Modificar" action="editar" actionListener="#{managedCliente.cargarDatos(lis)}"></h:commandButton>
+                    <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['listar.modificar']}" action="editar" actionListener="#{managedCliente.cargarDatos(lis)}"></h:commandButton>
                 </h:column>
             </b:dataTable>
         </h:form>

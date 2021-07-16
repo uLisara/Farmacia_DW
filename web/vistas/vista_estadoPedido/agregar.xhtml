@@ -8,13 +8,13 @@
     <h:body>
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedEstadoPedido.estadopedido.idestadope}"></h:outputText>
                 
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.Nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedEstadoPedido.estadopedido.nomestadope}"></h:inputText>
                 
-                <h:commandButton value="Agregar" action="listar" actionListener="#{managedEstadoPedido.guardar()}"></h:commandButton>
+                <h:commandButton value="#{msj['agregar.guardar']}" action="listar" actionListener="#{managedEstadoPedido.guardar()}"></h:commandButton>
             </h:panelGrid>
         </h:form>
     </h:body>

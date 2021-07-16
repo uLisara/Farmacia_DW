@@ -11,27 +11,27 @@
             <h:dataTable value="#{managedTipoPago.listTipoPago}" var="lis">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="ID"></h:outputText>
+                        <h:outputText value="#{msj['listar.ID']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idpg}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Nombre"></h:outputText>
+                        <h:outputText value="#{msj['listar.Nombre']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.nombrepg}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Eliminar"></h:outputText>
+                        <h:outputText value="#{msj['listar.eliminar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton value="Eliminar" actionListener="#{managedTipoPago.eliminar(lis)}"></h:commandButton>
+                    <h:commandButton value="#{msj['listar.eliminar']}" actionListener="#{managedTipoPago.eliminar(lis)}"></h:commandButton>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Modificar"></h:outputText>
+                        <h:outputText value="#{msj['listar.modificar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton value="Modificar" action="editar" actionListener="#{managedTipoPago.cargarDatos(lis)}"></h:commandButton>
+                    <h:commandButton value="#{msj['listar.modificar']}" action="editar" actionListener="#{managedTipoPago.cargarDatos(lis)}"></h:commandButton>
                 </h:column>
             </h:dataTable>
         </h:form>

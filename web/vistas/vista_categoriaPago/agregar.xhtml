@@ -8,11 +8,11 @@
     <h:body>
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedCategoriaPago.catPago.idcatpago}"></h:outputText>
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.Nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedCategoriaPago.catPago.nomcatpago}"></h:inputText>
-                <h:commandButton value="Guardar" actionListener="#{managedCategoriaPago.guardar()}" action="lista"></h:commandButton>
+                <h:commandButton value="#{msj['agregar.guardar']}" actionListener="#{managedCategoriaPago.guardar()}" action="lista"></h:commandButton>
             </h:panelGrid>
         </h:form>
     </h:body>

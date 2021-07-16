@@ -11,45 +11,45 @@
             <h:dataTable value="#{managedDetallePedido.listDetalle}" var="lis">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="NRO"></h:outputText>
+                        <h:outputText value="#{msj['listar.ID']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.iddetallepe}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Producto"></h:outputText>
+                        <h:outputText value="#{msj['listar.Nombre']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idproductodetallepe.nombrepro}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Precio Unitario"></h:outputText>
+                        <h:outputText value="#{msj['listar.precioUnitario']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idproductodetallepe.preciopro}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Cantidad"></h:outputText>
+                        <h:outputText value="#{msj['listar.cantidad']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.cantidaddetellepe}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Costo"></h:outputText>
+                        <h:outputText value="#{msj['listar.precio']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.totaldetallepe}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Eliminar"></h:outputText>
+                        <h:outputText value="#{msj['listar.eliminar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton value="Eliminar" actionListener="#{managedDetallePedido.eliminar(lis)}"></h:commandButton>
+                    <h:commandButton value="#{msj['listar.eliminar']}" actionListener="#{managedDetallePedido.eliminar(lis)}"></h:commandButton>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Modificar"></h:outputText>
+                        <h:outputText value="#{msj['listar.modificar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton value="Modificar" action="editar" actionListener="#{managedDetallePedido.cargarDatos(lis)}"></h:commandButton>
+                    <h:commandButton value="#{msj['listar.modificar']}" action="editar" actionListener="#{managedDetallePedido.cargarDatos(lis)}"></h:commandButton>
                 </h:column>
             </h:dataTable>
         </h:form>

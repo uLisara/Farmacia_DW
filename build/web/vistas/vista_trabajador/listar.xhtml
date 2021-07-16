@@ -19,75 +19,75 @@ and open the template in the editor.
             <h:dataTable value="#{managedTrabajador.listaTraba}" var="lis">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Codigo"></h:outputText>
+                        <h:outputText value="#{msj['listar.dni']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idtra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Rol"></h:outputText>
+                        <h:outputText value="#{msj['listar.rol']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.idTipotrabajador.nomtipotra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Nombre"></h:outputText>
+                        <h:outputText value="#{msj['listar.Nombre']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.nombretra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="A. Paterno"></h:outputText>
+                        <h:outputText value="#{msj['listar.apellidoPaterno']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.apePaternotra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="A. Materno"></h:outputText>
+                        <h:outputText value="#{msj['listar.apellidoPaterno']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.apeMaternotra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Telefono"></h:outputText>
+                        <h:outputText value="#{msj['listar.telefono']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.telefonotra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Genero"></h:outputText>
+                        <h:outputText value="#{msj['listar.genero']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.sexotra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Direccion"></h:outputText>
+                        <h:outputText value="#{msj['listar.direccion']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.direcciontra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Correo"></h:outputText>
+                        <h:outputText value="#{msj['listar.correo']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.correotra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Contraseña"></h:outputText>
+                        <h:outputText value="#{msj['listar.contraseña']}"></h:outputText>
                     </f:facet>
                     <h:outputText value="#{lis.contrasenatra}"></h:outputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Eliminar"></h:outputText>
+                        <h:outputText value="#{msj['listar.eliminar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton value="Eliminar" actionListener="#{managedTrabajador.eliminar(lis)}"></h:commandButton>
+                    <h:commandButton value="#{msj['listar.eliminar']}" actionListener="#{managedTrabajador.eliminar(lis)}"></h:commandButton>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Modificar"></h:outputText>
+                        <h:outputText value="#{msj['listar.modificar']}"></h:outputText>
                     </f:facet>
-                    <h:commandButton value="Modificar" action="editar" actionListener="#{managedTrabajador.cargarDatos(lis)}"></h:commandButton>
+                    <h:commandButton value="#{msj['listar.modificar']}" action="editar" actionListener="#{managedTrabajador.cargarDatos(lis)}"></h:commandButton>
                 </h:column>
             </h:dataTable>
         </h:form>

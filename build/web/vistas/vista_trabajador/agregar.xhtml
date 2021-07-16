@@ -11,40 +11,40 @@
         <ui:include src="../../template/admin.xhtml"></ui:include>
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="DNI"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.dni']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.idtra}"></h:inputText>
                 
-                <h:outputLabel value="Tipo de Trabajador"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.TipoTrabajador']}"></h:outputLabel>
                 <h:selectOneMenu value="#{managedTrabajador.tipoTra.idtipotra}">
                     <f:selectItems value="#{managedTipotrabajador.lisTipo}" var="a"
                                    itemLabel="#{a.nomtipotra}" itemValue="#{a.idtipotra}"></f:selectItems>
                 </h:selectOneMenu>
                 
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.Nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.nombretra}"></h:inputText>
                 
-                <h:outputLabel value="Apellido Paterno"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.apellidoPaterno']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.apePaternotra}"></h:inputText>
                 
-                <h:outputLabel value="Apellido Materno"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.apellidoMaterno']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.apeMaternotra}"></h:inputText>
                 
-                <h:outputLabel value="Genero"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.genero']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.sexotra}"></h:inputText>
                 
-                <h:outputLabel value="Telefono"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.telefono']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.telefonotra}"></h:inputText>
                 
-                <h:outputLabel value="Direccion"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.direccion']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.direcciontra}"></h:inputText>
                 
-                <h:outputLabel value="Correo"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.correo']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.correotra}"></h:inputText>
                 
-                <h:outputLabel value="Contraseña"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.contraseña']}"></h:outputLabel>
                 <h:inputText value="#{managedTrabajador.traba.contrasenatra}"></h:inputText>
                 
-                <h:commandButton value="Guardar" action="listar" actionListener="#{managedTrabajador.guardar()}"></h:commandButton>
+                <h:commandButton value="#{msj['agregar.guardar']}" action="listar" actionListener="#{managedTrabajador.guardar()}"></h:commandButton>
             </h:panelGrid>
         </h:form>
     </h:body>

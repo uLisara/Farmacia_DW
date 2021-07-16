@@ -12,22 +12,22 @@
         <ui:include src="../../template/admin.xhtml"></ui:include>
         <h:form enctype="multipart/form-data">
             <h:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedProducto.pro.idpro}"></h:outputText>
                 
-                <h:outputLabel value="Categoria"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.categoria']}"></h:outputLabel>
                 <h:selectOneMenu value="#{managedProducto.sub.idSub}">
                     <f:selectItems value="#{managedSubCatPro.listaSubCatPro}" var="a"
                                    itemLabel="#{a.nombreSub}" itemValue="#{a.idSub}"></f:selectItems>
                 </h:selectOneMenu>
                 
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedProducto.pro.nombrepro}"></h:inputText>
                 
-                <h:outputLabel value="Precio"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.precio']}"></h:outputLabel>
                 <h:inputText value="#{managedProducto.pro.preciopro}"></h:inputText>
                 
-                <h:outputLabel value="Stock"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.stock']}"></h:outputLabel>
                 <h:inputText value="#{managedProducto.pro.stockpro}"></h:inputText>
             </h:panelGrid>    
                  <p:fileUpload mode="advanced"
@@ -36,12 +36,12 @@
                           allowTypes="/(\.|\/)(gif|jpg|jpeg|png|GIF|JPG|JPEJ|PNG)$/"></p:fileUpload>
                 
                 
-                <h:commandButton value="Actualizar" action="listar" actionListener="#{managedProducto.modificar()}"></h:commandButton>
+            <h:commandButton value="#{msj['editar.actualizar']}" action="listar" actionListener="#{managedProducto.modificar()}"></h:commandButton>
             
             
         </h:form>
-        <h:link outcome="/index" value="Regresar a principal"></h:link><br></br>
-        <h:link outcome="listar" value="Listar Productos"></h:link><br></br>
+        <h:link outcome="/index" value="#{msj['editar.regresar']}"></h:link><br></br>
+        <h:link outcome="listar" value="#{msj['editar.ListarProductos']}"></h:link><br></br>
     </h:body>
 </html>
 

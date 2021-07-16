@@ -11,46 +11,46 @@
         <ui:include src="../../template/admin.xhtml"></ui:include>
         <h:form>
             <h:panelGrid columns="2">
-                <h:outputLabel value="DNI"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.dni']}"></h:outputLabel>
                 <h:outputText value="#{managedCliente.cli.dnicli}"></h:outputText>
                 
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.nombrecli}"></h:inputText>
                 
-                <h:outputLabel value="Apellido Paterno"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.apellidoPaterno']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.apePaternocli}"></h:inputText>
                 
-                <h:outputLabel value="Apellido Materno"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.apellidoMaterno']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.apeMaternocli}"></h:inputText>
                 
-                <h:outputLabel value="Genero"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.genero']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.sexocli}"></h:inputText>
                 
-                <h:outputLabel value="Telefono"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.telefono']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.telefonocli}"></h:inputText>
                 
-                <h:outputLabel value="Correo"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.correo']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.correocli}"></h:inputText>
                 
-                <h:outputLabel value="Contraseña"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.contraseña']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.contrasenacli}"></h:inputText>
                 
-                <h:outputLabel value="Distrito"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.distrito']}"></h:outputLabel>
                 <h:selectOneMenu value="#{managedCliente.dis.idDistrito}">
                     <f:selectItems value="#{managedDistrito.listarDistrito}" var="a"
                                    itemLabel="#{a.nomDis}" itemValue="#{a.idDistrito}"></f:selectItems>
                 </h:selectOneMenu>
                 
-                <h:outputLabel value="Direccion"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.direccion']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.direccioncli}"></h:inputText>
                 
-                <h:outputLabel value="Referencia"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.referencia']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.referenciacli}"></h:inputText>
                 
-                <h:commandButton value="Actualizar" action="listar" actionListener="#{managedCliente.modificar()}"></h:commandButton>
+                <h:commandButton value="#{msj['editar.actualizar']}" action="listar" actionListener="#{managedCliente.modificar()}"></h:commandButton>
             </h:panelGrid>
-            <h:link outcome="/index" value="Regresar a principal"></h:link><br></br>
-            <h:link outcome="listar" value="Listar Clientes"></h:link><br></br>
+            <h:link outcome="/index" value="#{msj['editar.regresar']}"></h:link><br></br>
+            <h:link outcome="listar" value="#{msj['editar.ListarCliente']}"></h:link><br></br>
         </h:form>
     </h:body>
 </html>

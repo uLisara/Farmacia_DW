@@ -16,7 +16,7 @@
                 <h:outputText value="Correo"/>
                 <h:inputText value="#{managedCliente.cli.contrasenacli}" id="contrasena" required="true"/>
                 
-                <h:commandButton value="Iniciar Sesion" action="#{managedCliente.iniciar()}"/><br/>
+                <h:commandButton value="Iniciar Sesion" action="#{managedCliente.validarCliente()}"/><br/>
                 <h:link outcome="registroC" value="¿No tienes cuenta? Resgistrate"></h:link>
             </h:panelGrid>
         </h:form>

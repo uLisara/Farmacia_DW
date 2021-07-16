@@ -16,13 +16,13 @@
         <h:form  style="border:5px solid #E1E1E1; border-radius: 10px; height: 150px;
                 margin: 0 auto; width: 30%; padding-bottom: 20px; padding-left: 1px; padding-top: 20px; text-align: center">
             <b:panelGrid columns="2">
-                <h:outputLabel value="ID"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.ID']}"></h:outputLabel>
                 <h:outputText value="#{managedDistrito.distri.idDistrito}"></h:outputText>
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.Nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedDistrito.distri.nomDis}"></h:inputText>
-                <h:outputLabel value="Costo Envio"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.costoEnvio']}"></h:outputLabel>
                 <h:inputText value="#{managedDistrito.distri.costoenvio}"></h:inputText>
-                <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Guardar" actionListener="#{managedDistrito.guardar()}" action="listar"></h:commandButton>
+                <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['agregar.guardar']}" actionListener="#{managedDistrito.guardar()}" action="listar"></h:commandButton>
             </b:panelGrid>
         </h:form>
     </h:body>

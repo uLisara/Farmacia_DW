@@ -13,46 +13,46 @@
         <h:form style="border:5px solid #E1E1E1; border-radius: 10px; height: 400px;
                 margin: 0 auto; width: 38%; padding-bottom: 20px; padding-left: 90px; padding-top: 20px; padding-right: 2px">
             <b:panelGrid  colSpans="2,10">
-                <h:outputLabel value="DNI"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.dni']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.dnicli}">
                     <f:validateLongRange maximum="99999999" />
                 </h:inputText>
                 
-                <h:outputLabel value="Nombre"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.Nombre']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.nombrecli}"></h:inputText>
                 
-                <h:outputLabel value="Apellido Paterno"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.apellidoPaterno']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.apePaternocli}"></h:inputText>
                 
-                <h:outputLabel value="Apellido Materno"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.apellidoMaterno']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.apeMaternocli}"></h:inputText>
                 
-                <h:outputLabel value="Genero"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.genero']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.sexocli}"></h:inputText>
                 
-                <h:outputLabel value="Telefono"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.telefono']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.telefonocli}"></h:inputText>
                 
-                <h:outputLabel value="Correo"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.correo']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.correocli}"></h:inputText>
                 
-                <h:outputLabel value="Contraseña"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.contraseña']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.contrasenacli}"></h:inputText>
                 
-                <h:outputLabel value="Distrito"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.distrito']}"></h:outputLabel>
                 <h:selectOneMenu value="#{managedCliente.dis.idDistrito}">
                     <f:selectItems value="#{managedDistrito.listarDistrito}" var="a"
                                    itemLabel="#{a.nomDis}" itemValue="#{a.idDistrito}"></f:selectItems>
                 </h:selectOneMenu>
                 
-                <h:outputLabel value="Direccion"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.direccion']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.direccioncli}"></h:inputText>
                 
-                <h:outputLabel value="Referencia"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.referencia']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.referenciacli}"></h:inputText>
                 <br></br>
                 
-                <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Guardar" action="listar" actionListener="#{managedCliente.guardar()}"></h:commandButton>
+                <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['agregar.guardar']}" action="listar" actionListener="#{managedCliente.guardar()}"></h:commandButton>
             </b:panelGrid>
         </h:form> 
             
