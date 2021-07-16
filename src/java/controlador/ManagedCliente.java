@@ -85,7 +85,7 @@ public class ManagedCliente {
         String irPagina = null;
         usu = clienteFacade.iniciarSesion(cli);
         if(!usu.isEmpty()){
-            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("cleinte", cli);
+            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("cliente", cli);
             irPagina = "SaludoC";
             Iterator i = usu.iterator();
             while(i.hasNext()){

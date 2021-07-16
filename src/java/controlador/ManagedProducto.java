@@ -27,7 +27,7 @@ public class ManagedProducto {
     private List<Producto> listaPro;
     private Producto pro;
     private Subcategoria sub;
-    String ruta = "C:\\Users\\jose2\\OneDrive\\Documentos\\NetBeansProjects\\UNICO PROYECTO WEB\\Proyecto\\web\\imagenes\\";
+    String ruta = "C:\\Users\\jose2\\OneDrive\\Documentos\\NetBeansProjects\\UNICO PROYECTO WEB\\Proyecto\\web\\resources\\images\\";
 
     public List<Producto> getListaPro() {
         this.listaPro = proFacade.findAll();
@@ -72,7 +72,7 @@ public class ManagedProducto {
             UploadedFile uploadedFile = event.getFile();
             String nombreArchivo = uploadedFile.getFileName();
             File file = new File(ruta, nombreArchivo);
-            pro.setImagen(ruta+nombreArchivo);
+            pro.setImagen("resources\\images\\"+nombreArchivo);
             OutputStream out = new FileOutputStream(file);
             InputStream in = uploadedFile.getInputstream();
             while((read = in.read(bytes))!=-1){

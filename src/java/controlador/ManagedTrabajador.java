@@ -2,6 +2,7 @@
 package controlador;
 
 import EBJ.TrabajadorFacadeLocal;
+import java.util.Iterator;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
@@ -18,6 +19,7 @@ public class ManagedTrabajador {
     @EJB
     private TrabajadorFacadeLocal trabFacade;
     private List<Trabajador> listaTraba;
+    private List<Trabajador> usuTra;
     private Trabajador traba;
     private Tipotrabajador tipoTra;
 
@@ -28,6 +30,14 @@ public class ManagedTrabajador {
 
     public void setListaTraba(List<Trabajador> listaTraba) {
         this.listaTraba = listaTraba;
+    }
+    
+    public List<Trabajador> getUsuTra() {
+        return usuTra;
+    }
+
+    public void setUsuTra(List<Trabajador> usuTra) {
+        this.usuTra = usuTra;
     }
 
     public Trabajador getTraba() {
@@ -69,5 +79,22 @@ public class ManagedTrabajador {
         this.traba.setIdTipotrabajador(tipoTra);
         this.trabFacade.edit(traba);
     }
+
+    public String validarCliente(){
+        String irPagina = null;
+        usuTra = trabFacade.iniciarSesionT(traba);
+        if(!usuTra.isEmpty()){
+            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("trabajador", traba);
+            irPagina = "indexTrabajador";
+            Iterator i = usuTra.iterator();
+            while(i.hasNext()){
+                traba = (Trabajador)i.next();
+            }
+        }else{
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_FATAL,"UsuarioInvalido","Aviso"));
+        }
+        return irPagina;
+    }
+    
     
 }
