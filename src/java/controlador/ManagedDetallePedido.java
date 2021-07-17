@@ -134,8 +134,13 @@ public class ManagedDetallePedido {
             detalle.setIdproductodetallepe(p);
             detalle.setTotaldetallepe(calcularSubTotal(p));
             detalle.setCantidaddetellepe(getSpin());
-            listCarrito.add(detalle);
             detalleFacade.create(detalle);
+            int x =detalleFacade.count()+12;
+            System.out.println(x);
+            detalle.setIddetallepe(x);
+            //detalle.setIddetallepe(1);
+            listCarrito.add(detalle);
+            
             setSpin(0);
             
             

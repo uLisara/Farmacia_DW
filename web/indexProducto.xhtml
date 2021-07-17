@@ -35,7 +35,13 @@
             <h:dataTable value="#{managedDetallePedido.listCarrito}" var="c">
                 <h:column>
                     <f:facet name="header">
-                        <h:outputText value="Codigo"/>
+                        <h:outputText value="Codigo c"/>
+                    </f:facet>
+                    <h:outputText value="#{c.iddetallepe}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Codigo p"/>
                     </f:facet>
                     <h:outputText value="#{c.idproductodetallepe.idpro}"></h:outputText>
                 </h:column>
@@ -57,17 +63,18 @@
                     </f:facet>
                     <h:outputText value="#{c.idproductodetallepe.preciopro}"></h:outputText>
                 </h:column>
-                <h:column>
-                    <f:facet name="header">
-                        <h:outputText value="Accion:"/>
-                    </f:facet>
-                    <h:commandButton value="Eliminar" actionListener="#{managedDetallePedido.eliminarProductoCarrito(c.idproductodetallepe.idpro)}"/>
-                </h:column>
+                
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="Precio Total"/>
                     </f:facet>
                     <h:outputText value="#{c.totaldetallepe}"></h:outputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Accion:"/>
+                    </f:facet>
+                    <h:commandButton value="Eliminar" actionListener="#{managedDetallePedido.eliminarProductoCarrito(c.idproductodetallepe.idpro)}"/>
                 </h:column>
             </h:dataTable>
             <h:outputText value="Total a pagar: #{managedDetallePedido.total}"/>
