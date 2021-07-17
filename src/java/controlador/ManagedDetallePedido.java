@@ -130,10 +130,14 @@ public class ManagedDetallePedido {
             listCarrito = new ArrayList<>();
         boolean res = buscarProducto(p);
         if(res==false){
+            detalle = new Detallepedido();
             detalle.setIdproductodetallepe(p);
             detalle.setTotaldetallepe(calcularSubTotal(p));
             detalle.setCantidaddetellepe(getSpin());
             listCarrito.add(detalle);
+            detalleFacade.create(detalle);
+            setSpin(0);
+            
             
         }
         total=calcularTotalPagar();
@@ -145,6 +149,17 @@ public class ManagedDetallePedido {
         for(int i=0;i<listCarrito.size();i++)
             suma=suma+(listCarrito.get(i).getTotaldetallepe());
         return suma;
+    }
+    
+    public List<Detallepedido> eliminarProductoCarrito(int id){
+        if(listCarrito ==  null)
+            listCarrito = new ArrayList<>();
+        for (int i = 0; i < listCarrito.size(); i++) {
+            if(listCarrito.get(i).getIdproductodetallepe().getIdpro()==id)
+                listCarrito.remove(i);
+        }
+        total=calcularTotalPagar();
+        return listCarrito;
     }
 
     
