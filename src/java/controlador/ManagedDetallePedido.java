@@ -22,6 +22,7 @@ public class ManagedDetallePedido {
     private Producto prod;
     private int spin;
     private double total;
+    private int x;
     
     
     public List<Detallepedido> getListDetalle() {
@@ -135,7 +136,7 @@ public class ManagedDetallePedido {
             detalle.setTotaldetallepe(calcularSubTotal(p));
             detalle.setCantidaddetellepe(getSpin());
             detalleFacade.create(detalle);
-            int x =detalleFacade.count()+12;
+            x =detalleFacade.count()+12;
             System.out.println(x);
             detalle.setIddetallepe(x);
             //detalle.setIddetallepe(1);
@@ -165,6 +166,14 @@ public class ManagedDetallePedido {
         }
         total=calcularTotalPagar();
         return listCarrito;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
     }
 
     

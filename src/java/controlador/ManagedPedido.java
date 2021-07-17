@@ -124,4 +124,8 @@ public class ManagedPedido {
         this.pedid.setIdTipopagopedi(tipoPago);
         this.pedidoFacade.edit(pedid);
     }
+    
+    public List<Pedido> procesarPedidos(int codDetalle){
+        return null;
+    }
 }

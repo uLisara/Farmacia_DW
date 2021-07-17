@@ -4,7 +4,8 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
     <h:head>
         <title>Facelet Title</title>
         <meta name="viewport" content="width=device-width"></meta>
@@ -78,6 +79,7 @@
                 </h:column>
             </h:dataTable>
             <h:outputText value="Total a pagar: #{managedDetallePedido.total}"/>
+            <b:commandButton value="Procesar" action="ProcesoCompra"></b:commandButton>
         </h:form>
     </h:body>
 </html>
