@@ -80,7 +80,7 @@ public class ManagedTrabajador {
         this.trabFacade.edit(traba);
     }
 
-    public String validarCliente(){
+    public String validarTrabajador(){
         String irPagina = null;
         usuTra = trabFacade.iniciarSesionT(traba);
         if(!usuTra.isEmpty()){
