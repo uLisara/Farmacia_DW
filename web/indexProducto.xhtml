@@ -9,8 +9,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <title>Facelet Title</title>
-        <meta name="viewport" content="width=device-width"></meta>
-                <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+       
     </h:head>
     <h:body> 
         <b:navBar brand="info@company.com" brandHref="#" fluid="true" style="background-color: #daab13; font-family:serif; font-size:smaller ">
@@ -31,7 +30,7 @@
         </b:navBar> 
         <c:forEach items="#{managedProducto.listaPro}" var="a">
             <h:form>
-                <div class="card" style="width: 20rem;align-self: center"><br></br>
+                <div class="col-md-4" style="padding-left: 20px; padding-right: 20px; padding-bottom: 20px; padding-top: 20px" ><br></br>
                     <h:graphicImage value="#{a.imagen}"
                                     height="100" width="100" style="align-self: center" />
                     <div class="card-body" style="align-content: center">
@@ -43,14 +42,13 @@
                         <p:spinner id="minMax" value="#{managedDetallePedido.spin}" min="0" max="#{a.stockpro}" style="align-items: center" >
                             </p:spinner>
                         
-                        <h:commandButton class="btn btn-primary" value="Agregar al Carrito" actionListener="#{managedDetallePedido.agregaCarrito(a)}" ></h:commandButton>
+                        <h:commandButton style="background-color: #0066cc" class="btn btn-primary" value="Agregar al Carrito" actionListener="#{managedDetallePedido.agregaCarrito(a)}" ></h:commandButton>
                     </div>
                 </div>
             </h:form> 
         </c:forEach>
-        
         <h:form>
-            <h:dataTable value="#{managedDetallePedido.listCarrito}" var="c">
+            <b:dataTable value="#{managedDetallePedido.listCarrito}" var="c">
                 <h:column>
                     <f:facet name="header">
                         <h:outputText value="Codigo c"/>
@@ -92,11 +90,12 @@
                     <f:facet name="header">
                         <h:outputText value="Accion:"/>
                     </f:facet>
-                    <h:commandButton value="Eliminar" actionListener="#{managedDetallePedido.eliminarProductoCarrito(c.idproductodetallepe.idpro)}"/>
+                    <h:commandButton style="background-color: #ff0000" class="btn btn-primary" value="Eliminar" actionListener="#{managedDetallePedido.eliminarProductoCarrito(c.idproductodetallepe.idpro)}"/>
                 </h:column>
-            </h:dataTable>
-            <h:outputText value="Total a pagar: #{managedDetallePedido.total}"/>
-            <b:commandButton value="Procesar" action="ProcesoCompra"></b:commandButton>
+            </b:dataTable>
+            <h:outputText value="Total a pagar: #{managedDetallePedido.total}"/> 
+            <br></br>
+            <b:commandButton style="background-color: #0066cc" class="btn btn-primary" value="Procesar" action="ProcesoCompra"></b:commandButton>
         </h:form>
     </h:body>
 </html>
