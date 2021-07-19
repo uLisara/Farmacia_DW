@@ -12,24 +12,18 @@
         <br></br>
         <br></br>
         <br></br> 
-        <b:navBar brand="info@company.com" brandHref="#" fluid="true" style="background-color: #daab13; font-family:serif; font-size:smaller ">
-             <b:navbarLinks pull="right" styleClass="hidden-xs"> 
-                 <b:socialShare shares="twitter,linkedin,facebook"
-               showLabel="true" show-count="false"
-               text="BootsFaces rocks!" block-message="Click to unblock the share buttons" />
-            </b:navbarLinks> 
+
         <h:form style="border:5px solid #E1E1E1; border-radius: 10px; height: 350px;
                 margin: 0 auto; width: 20%; padding-bottom: 10px; padding-left: 50px; padding-top: 30px" >
             <h:outputLabel value="Iniciar Sesión "></h:outputLabel><br></br>
             <h:outputLabel value="CLIENTE "></h:outputLabel> <br></br><br></br> 
-            <b:panelGrid columns="2">
+            <b:panelGrid columns="1">
                 <h:outputText value="Correo"/>
-                <br></br>
                 <h:inputText value="#{managedCliente.cli.correocli}" id="correo" required="true"/>
                 <br></br>
                 <br></br>
                 <h:outputText value="Contraseña"/>
-                <h:inputText value="#{managedCliente.cli.contrasenacli}" id="contrasena" required="true"/>
+                <h:inputSecret value="#{managedCliente.cli.contrasenacli}" id="contrasena" required="true"/>
                 <br></br>
                 <br></br>
                 <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Iniciar Sesion" action="#{managedCliente.validarCliente()}"/><br></br>
@@ -37,7 +31,9 @@
                 <br></br>
                 <h:link outcome="registroC" value="¿No tienes cuenta? Registrate"></h:link> <br></br>
             </b:panelGrid>
+           
         </h:form>
+        
     </h:body>
 </html>
 

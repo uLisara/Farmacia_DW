@@ -7,12 +7,15 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <title>Facelet Title</title>
+        <f:event type="preRenderView" listener="#{managedSession.verificarSessionC()}"></f:event>
     </h:head>
     <h:body>
-        <ui:include src="/template/cliente.xhtml"/>
-        <h:form>
-            <b:panelGrid columns="2">
-                
+        <ui:include src="/template/clienteS.xhtml"/>
+        
+        <h:form style="border:5px solid #E1E1E1; border-radius: 10px; height: 350px;
+                margin: 0 auto; width: 20%; padding-bottom: 10px; padding-left: 50px; padding-top: 30px" >
+            <b:panelGrid columns="1">
+                <h:outputText value="Proceso de la compra"></h:outputText>
                 <h:outputText value="#{managedPedido.cli.setDnicli(managedCliente.cli.dnicli)}"/>
                 
                 
@@ -33,7 +36,9 @@
                                    itemLabel="#{e.nombrepg}" itemValue="#{e.idpg}"></f:selectItems>
                 </h:selectOneMenu>
                 
-                <h:commandButton style="background-color: #0066cc" class="btn btn-warning" value="#{msj['agregar.guardar']}" action="index" actionListener="#{managedPedido.guardar()}"></h:commandButton>
+                <h:commandButton style="background-color: #0066cc" class="btn btn-warning" value="#{msj['agregar.guardar']}" action="index" 
+                                 
+                                 actionListener="#{managedPedido.guardar()}"></h:commandButton>
             </b:panelGrid>
         </h:form>
     </h:body>

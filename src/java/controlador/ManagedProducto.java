@@ -27,7 +27,7 @@ public class ManagedProducto {
     private List<Producto> listaPro;
     private Producto pro;
     private Subcategoria sub;
-    String ruta = "C:\\Users\\jose2\\OneDrive\\Documentos\\NetBeansProjects\\UNICO PROYECTO WEB\\Proyecto\\web\\resources\\images\\";
+    String ruta = "C:\\Users\\jose2\\OneDrive\\Documentos\\NetBeansProjects\\PROYECTO YANIRA\\Farmacia_DW\\web\\resources\\images";
 
     public List<Producto> getListaPro() {
         this.listaPro = proFacade.findAll();

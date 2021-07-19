@@ -41,25 +41,26 @@ public class ManagedSession {
            } catch (IOException ex) {
                Logger.getLogger(ManagedSession.class.getName()).log(Level.SEVERE, null, ex);
            }
-       }else{
-           System.out.println("AAAA:" +trabajador.getIdtra());
        }
     }
     public void verificarSessionC(){
-       cliente = (Cliente)FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("trabajador");
+       cliente = (Cliente)FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("cliente");
        if(cliente == null){
            try {
-               FacesContext.getCurrentInstance().getExternalContext().redirect("loginC.xhtml");
+               FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
            } catch (IOException ex) {
                Logger.getLogger(ManagedSession.class.getName()).log(Level.SEVERE, null, ex);
            }
-       }else{
-           System.out.println("AAAA:" +cliente.getDnicli());
        }
     }
     
     public void cerrarSession(){
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect("index.xhtml");
+        } catch (IOException ex) {
+            Logger.getLogger(ManagedSession.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     @PostConstruct
