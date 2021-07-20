@@ -22,19 +22,19 @@
             <h:outputLabel value="Iniciar Sesion"></h:outputLabel><br></br>
             <h:outputLabel value="ADMINISTRADOR"></h:outputLabel><br></br><br></br>
             <b:panelGrid columns="2">
-                <h:outputLabel value="Correo"></h:outputLabel>
+                <h:outputLabel value="#{msj['agregar.correo']}"></h:outputLabel>
                 <br></br>
                 <h:inputText value="#{managedTrabajador.traba.correotra}" required="true"/>
                 <br></br>
                 <br></br>
-                <h:outputText value="Contrasena"></h:outputText>
+                <h:outputText value="#{msj['agregar.contrasena']}"></h:outputText>
                 <h:inputText value="#{managedTrabajador.traba.contrasenatra}" required="true"/>
                 <br></br>
                 <br></br>
-                <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="Iniciar Sesion" action="#{managedTrabajador.validarTrabajador()}"></h:commandButton>
+                <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['loginT.IniciarSesion']}" action="#{managedTrabajador.validarTrabajador()}"></h:commandButton>
             </b:panelGrid>
         </h:form>
-            <ui:include src="../../template/footer.xhtml"></ui:include>
+            <ui:include src="/template/footer.xhtml"></ui:include>
     </h:body>
 </html>
 

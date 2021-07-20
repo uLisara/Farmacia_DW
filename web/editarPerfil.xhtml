@@ -39,7 +39,7 @@
                 <h:outputLabel value="#{msj['editar.correo']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.correocli}"></h:inputText>
                 
-                <h:outputLabel value="#{msj['editar.contraseña']}"></h:outputLabel>
+                <h:outputLabel value="#{msj['editar.contrasena']}"></h:outputLabel>
                 <h:inputText value="#{managedCliente.cli.contrasenacli}"></h:inputText>
                 
                 <h:outputLabel value="#{msj['editar.distrito']}"></h:outputLabel>
@@ -57,7 +57,7 @@
                 <h:commandButton style="background-color: #0066cc " class="btn btn-warning" value="#{msj['editar.actualizar']}" action="indexProducto" actionListener="#{managedCliente.modificar()}"></h:commandButton>
             </b:panelGrid>
         </h:form>
-        <ui:include src="../../template/footer.xhtml"></ui:include>
+        <ui:include src="/template/footer.xhtml"></ui:include>
     </h:body>
 </html>
 

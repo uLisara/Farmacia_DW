@@ -22,18 +22,18 @@
                     <div class="card-body" style="align-content: center">
                         <h:outputText value="#{a.nombrepro}" class="card-title" style="align-content: center;"/><br/>
                         <h:outputText value="#{a.idpro}" style="align-self: center;"></h:outputText><br/>
-                        <h:outputText title="Precio" value="#{a.preciopro}" style="align-self: center;"/><br></br>
-                        <h:outputText title="Stock" value="#{a.stockpro}" style="align-self: center;" /><br></br>
+                        <h:outputText title="#{msj['agregar.precio']}" value="#{a.preciopro}" style="align-self: center;"/><br></br>
+                        <h:outputText title="#{msj['agregar.stock']}" value="#{a.stockpro}" style="align-self: center;" /><br></br>
                         
                         <p:spinner id="minMax" value="#{managedDetallePedido.spin}" min="0" max="#{a.stockpro}" style="align-items: center" >
                             </p:spinner>
                         
-                        <h:commandButton style="background-color: #0066cc" class="btn btn-primary" value="Agregar al Carrito" actionListener="#{managedDetallePedido.agregaCarrito(a)}" ></h:commandButton>
+                        <h:commandButton style="background-color: #0066cc" class="btn btn-primary" value="#{msj['vista.agregar']}" actionListener="#{managedDetallePedido.agregaCarrito(a)}" ></h:commandButton>
                     </div>
                 </div>
             </h:form> 
         </c:forEach>
-       <ui:include src="../../template/footer.xhtml"></ui:include>
+       <ui:include src="/template/footer.xhtml"></ui:include>
     </h:body>
 </html>
 

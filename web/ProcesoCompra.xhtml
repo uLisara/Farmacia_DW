@@ -15,7 +15,7 @@
         <h:form style="border:5px solid #E1E1E1; border-radius: 10px; height: 350px;
                 margin: 0 auto; width: 20%; padding-bottom: 10px; padding-left: 50px; padding-top: 30px" >
             <b:panelGrid columns="1">
-                <h:outputText value="Proceso de la compra"></h:outputText>
+                <h:outputText value="#{msj['vista.proceso']}"></h:outputText>
                 <h:outputText value="#{managedPedido.cli.setDnicli(managedCliente.cli.dnicli)}"/>
                 
                 
@@ -41,7 +41,7 @@
                                  actionListener="#{managedPedido.guardar()}"></h:commandButton>
             </b:panelGrid>
         </h:form>
-        <ui:include src="../../template/footer.xhtml"></ui:include>
+        <ui:include src="/template/footer.xhtml"></ui:include>
     </h:body>
 </html>
 

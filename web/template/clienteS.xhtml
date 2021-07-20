@@ -7,23 +7,17 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <b:navBar brand="ecofarma@salud.com" brandHref="#" fluid="true" style="background-color: #daab13; font-family:serif; font-size:smaller ">
-             <b:navbarLinks pull="right" styleClass="hidden-xs"> 
-                 <b:socialShare shares="twitter,linkedin,facebook"
-               showLabel="true" show-count="false"
-               text="BootsFaces rocks!" block-message="Click to unblock the share buttons" />
-            </b:navbarLinks> 
-        </b:navBar>
+        
         <b:navBar brand="EcoFarma" brandHref="#" fluid="true">
             <b:navbarLinks>
-                <b:navLink value="Productos" href="indexProducto.xhtml"></b:navLink>
+                <b:navLink value="#{msj['vista.producto']}" href="indexProducto.xhtml"></b:navLink>
             </b:navbarLinks>
             <b:navbarLinks pull="right"><b:navLink value="    " href="#"></b:navLink></b:navbarLinks>
                 <b:navbarLinks pull="right" styleClass="hidden-xs"> 
-                    <b:navLink value="Carrito" href="carrito.xhtml" iconAwesome="shopping-cart"></b:navLink>
+                    <b:navLink value="#{msj['vista.carrito']}" href="carrito.xhtml" iconAwesome="shopping-cart"></b:navLink>
                     <b:navLink value="#{managedCliente.cli.nombrecli}" href="editarPerfil.xhtml"></b:navLink>
                     <b:navLink><h:form>
-                    <b:navCommandLink actionListener="#{managedSession.cerrarSession()}" value="CerrarSesion"
+                            <b:navCommandLink actionListener="#{managedSession.cerrarSession()}" value="#{msj['vista.cerrarSesion']}"
                                       update="@form" icon="tag"></b:navCommandLink></h:form></b:navLink>
                 </b:navbarLinks>
         </b:navBar>
